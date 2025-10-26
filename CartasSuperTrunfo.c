@@ -4,31 +4,37 @@ int main(){
 
     char estado1, codigo1[10], nome1[20], estado2, codigo2[10], nome2[20];
     int populacao1, turisticos1, populacao2, turisticos2;
-    float area1, pib1, area2, pib2;
+    float area1, pib1, area2, pib2, densidade1, densidade2, ppc1, ppc2;
+
+    
+    
 
     printf("\nBem vindo ao cadastro de cartas Super Trunfo de Estados Brasileiros!\n");
     printf("Vamos cadastrar a primeira carta. (para nomes com espaços, use _ no lugar do espaço) \n\n");
 
-    printf("Digite o nome da cidade:");
+    printf("Digite o nome da cidade: ");
     scanf("%s", nome1);
 
-    printf("Digite o estado da cidade:");
+    printf("Digite o estado da cidade: ");
     scanf(" %c", &estado1);
 
-    printf("Digite o codigo do estado:");
+    printf("Digite o codigo do estado: ");
     scanf("%s", codigo1);
 
-    printf("Digite a populacao do estado:");
+    printf("Digite a populacao do estado: ");
     scanf(" %d", &populacao1);
 
-    printf("Digite a quantidade de pontos turisticos do estado:");
+    printf("Digite a quantidade de pontos turisticos do estado: ");
     scanf(" %d", &turisticos1);
     
-    printf("Digite a area do estado:");
+    printf("Digite a area do estado: ");
     scanf("%f", &area1);
 
-    printf("Digite o PIB do estado:");
+    printf("Digite o PIB do estado: ");
     scanf("%f", &pib1);
+
+    densidade1 = (float) populacao1 / area1;
+    ppc1 = (float) pib1 / populacao1;
 
     printf("\nCadastro realizado com sucesso!\n");
 
@@ -38,12 +44,16 @@ int main(){
     printf("Populacao: %d\n", populacao1);
     printf("Pontos turisticos: %d\n", turisticos1);
     printf("Area: %.2f km²\n", area1);
-    printf("PIB: %.2f Bilhoes de Reais\n", pib1);
+    printf("Densidade: %.2f habitantes por km²\n", densidade1);
+    printf("PIB: R$ %.2f Bilhoes de Reais\n", pib1);
+    printf("PIB per capita: R$ %.2f\n", ppc1);
+
+
 
 
     printf("\nAgora vamos cadastrar a segunda carta. (para nomes com espaços, use _ no lugar do espaço)\n\n");
 
-    printf("Digite o nome da cidade:");
+    printf("Digite o nome da cidade: ");
     scanf("%s", nome2);
 
     printf("Digite o estado da cidade: ");
@@ -64,6 +74,8 @@ int main(){
     printf("Digite o PIB do estado: ");
     scanf("%f", &pib2);
 
+    densidade2 = (float) populacao2 / area2;
+    ppc2 = (float) pib2 / populacao2;
 
     printf("\nCadastro realizado com sucesso!\n");
 
@@ -73,7 +85,9 @@ int main(){
     printf("Populacao: %d\n", populacao2);
     printf("Pontos turisticos: %d\n", turisticos2);
     printf("Area: %.2f km²\n", area2);
-    printf("PIB: %.2f Bilhoes de Reais\n", pib2);
+    printf("Densidade: %.2f habitantes por km²\n", densidade2);
+    printf("PIB: R$ %.2f Bilhoes de Reais\n", pib2);
+    printf("PIB per capita: R$ %.2f\n", ppc2);
 
     return 0;
 }
