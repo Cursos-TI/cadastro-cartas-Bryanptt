@@ -16,6 +16,7 @@ int main(){
     scanf(" %s", nome1);
 
     printf("Digite o estado da cidade: ");
+    printf("Digite o estado da cidade: ");
     scanf(" %c", &estado1);
 
     printf("Digite o codigo do estado: ");
@@ -24,6 +25,7 @@ int main(){
     printf("Digite a populacao do estado: ");
     scanf(" %lu", &populacao1);
 
+    printf("Digite a quantidade de pontos turisticos do estado: ");
     printf("Digite a quantidade de pontos turisticos do estado: ");
     scanf(" %d", &turisticos1);
     
@@ -55,6 +57,7 @@ int main(){
 
     printf("\nAgora vamos cadastrar a segunda carta. (para nomes com espaços, use _ no lugar do espaço)\n\n");
 
+    printf("Digite o nome da cidade: ");
     printf("Digite o nome da cidade: ");
     scanf("%s", nome2);
 
